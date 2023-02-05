@@ -15,16 +15,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fM4-Jf-OB5">
+                                <rect key="frame" x="20" y="94" width="374" height="718"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="placeholder-cat" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-m3-M0g">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="677"/>
+                                    </imageView>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cats are the second most popular pet in the U.S., second to only freshwater fish." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYn-pS-d0K">
+                                        <rect key="frame" x="0.0" y="677" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fM4-Jf-OB5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="94" id="FgF-H7-vSG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fM4-Jf-OB5" secondAttribute="bottom" priority="900" constant="50" id="HMq-5j-LfU"/>
+                            <constraint firstItem="fM4-Jf-OB5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="TXm-5j-EKD"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fM4-Jf-OB5" secondAttribute="bottom" constant="50" id="Z3b-gp-GKi"/>
+                            <constraint firstAttribute="trailing" secondItem="fM4-Jf-OB5" secondAttribute="trailing" constant="20" id="t6O-rI-B2V"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Vkc-3E-cAL" appends="YES" id="MEN-xp-fx4"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="fact" destination="mYn-pS-d0K" id="dPF-7m-ZFZ"/>
+                        <outlet property="imageView" destination="LZa-m3-M0g" id="7zD-YL-kHO"/>
+                        <outlet property="stackView" destination="fM4-Jf-OB5" id="WVx-uV-nip"/>
+                        <outlet property="tapGesture" destination="Vkc-3E-cAL" id="sr2-bF-axT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vkc-3E-cAL"/>
             </objects>
             <point key="canvasLocation" x="81" y="87"/>
         </scene>
     </scenes>
     <resources>
+        <image name="placeholder-cat" width="320" height="320"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
