@@ -1,0 +1,6 @@
+framework module Pods_Albertsons_Assignment_Albertsons_AssignmentUITests {
+  umbrella header "Pods-Albertsons-Assignment-Albertsons-AssignmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
