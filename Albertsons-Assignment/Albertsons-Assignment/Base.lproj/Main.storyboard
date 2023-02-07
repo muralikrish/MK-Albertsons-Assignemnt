@@ -46,10 +46,10 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="fact" destination="mYn-pS-d0K" id="dPF-7m-ZFZ"/>
-                        <outlet property="imageView" destination="LZa-m3-M0g" id="7zD-YL-kHO"/>
-                        <outlet property="stackView" destination="fM4-Jf-OB5" id="WVx-uV-nip"/>
-                        <outlet property="tapGesture" destination="Vkc-3E-cAL" id="sr2-bF-axT"/>
+                        <outlet property="fact" destination="mYn-pS-d0K" id="eKK-eS-GtY"/>
+                        <outlet property="imageView" destination="LZa-m3-M0g" id="wRn-Qr-5Zo"/>
+                        <outlet property="stackView" destination="fM4-Jf-OB5" id="P2Y-PB-dCe"/>
+                        <outlet property="tapGesture" destination="Vkc-3E-cAL" id="SRR-QD-V1k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -14,10 +14,19 @@ class ViewController: UIViewController, Storyboarded {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var fact: UILabel!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
+    var viewModel: ViewModel? {
+        didSet {
+            updateUI()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setUp()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
     }
     
     func setUp() {
@@ -25,9 +34,13 @@ class ViewController: UIViewController, Storyboarded {
         self.view.addGestureRecognizer(tapGesture)
     }
     
-    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
-        print("did tap view", sender)
+    func updateUI() {
+            self.fact.text = self.viewModel?.fact
+            self.imageView.image = UIImage(data: (self.viewModel?.imageData)!)
     }
-
+    
+    
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        
+    }
 }
-
