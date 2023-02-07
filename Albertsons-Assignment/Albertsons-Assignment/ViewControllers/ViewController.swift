@@ -30,13 +30,14 @@ class ViewController: UIViewController, Storyboarded {
         self.navigationItem.title = "Cats Information"
     }
     
+    /// Updates the UI Elements, fact label and imageView.
     func updateUI() {
         self.fact.text = viewModel?.fact
         self.imageView.image = UIImage(data: (viewModel?.imageData)!)
     }
     
+    /// Invoked upon tapping on view.
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
-        print("did tap view", sender)
         coordinator?.retrieveDataAndUpdate()
     }
 }

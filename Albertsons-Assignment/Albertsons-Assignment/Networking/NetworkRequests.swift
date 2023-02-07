@@ -21,6 +21,7 @@ protocol NetworkRequesting {
     func makeKittenImageRequest(completion: @escaping (Data?) -> Void)
 }
 
+/// Providing default implementation for the protocol methods
 extension NetworkRequesting {
     /// generic method to make API get request.
     func makeRequestWithUrl<T:Decodable>(with url:String, completion: @escaping (Result<T, Error>) -> Void) {
