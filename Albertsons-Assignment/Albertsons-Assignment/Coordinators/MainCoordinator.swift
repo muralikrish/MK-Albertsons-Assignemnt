@@ -10,49 +10,61 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    var navigationController: UINavigationController?
     var network = NetworkRequests()
     var meowFactResposne: FactResponse?
     var kittenResponse: Data?
     var viewModel: ViewModel?
+    let group = DispatchGroup()
+    var viewController: ViewController
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController?, viewController:ViewController = ViewController.instantiate()) {
         self.navigationController = navigationController
+        self.viewController = viewController
     }
     
     func start() {
-        let viewController = ViewController.instantiate()
+        self.viewController.coordinator = self
+        self.navigationController?.pushViewController(viewController, animated: false)
+        retrieveDataAndUpdate()
+    }
+    
+    func retrieveDataAndUpdate(){
         let queue = DispatchQueue.global(qos: .userInitiated)
         queue.async {
-            let group = DispatchGroup()
-            group.enter()
-            self.network.makeMeowFactsRequest { [weak self] (result: Result<FactResponse, Error>) in
-                group.leave()
-                switch result {
-                case .success(let data):
-                    self?.meowFactResposne = data
-                case .failure(let error):
-                    print(error)
-                }
-            }
-            group.enter()
-            self.network.makeKittenRequest { [weak self] (data) in
-                group.leave()
-                guard let data = data else {
-                    print("Error!! Problem downloading the image")
-                    return
-                }
-                self?.kittenResponse = data
-            }
-            group.wait()
+            self.group.enter()
+            self.makeMeowFactsRequest()
+            self.group.enter()
+            self.makeKittenImageRequest()
+            self.group.wait() // Waiting for both the requests to finish to create ViewModel.
             DispatchQueue.main.async {
+                ///Creating viewModel and passing to viewController
                 self.viewModel = ViewModel(fact: self.meowFactResposne?.getFact(), imageData: self.kittenResponse)
-                viewController.viewModel = self.viewModel
+                self.viewController.viewModel = self.viewModel
             }
         }
-        _ = viewController.view
-        viewController.coordinator = self
-        self.navigationController.pushViewController(viewController, animated: false)
-
+    }
+    
+    func makeMeowFactsRequest() {
+        self.network.makeMeowFactsRequest { [weak self] (result: Result<FactResponse, Error>) in
+            self?.group.leave() //Indicating the makeMeowFactsRequest has completed.
+            switch result {
+            case .success(let data):
+                self?.meowFactResposne = data
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func makeKittenImageRequest() {
+        self.network.makeKittenImageRequest { [weak self] (data) in
+            self?.group.leave() //Indicating the makeKittenImageRequest has completed.
+            guard let data = data else {
+                print("Error!! Problem downloading the image")
+                return
+            }
+            self?.kittenResponse = data
+        }
     }
 }

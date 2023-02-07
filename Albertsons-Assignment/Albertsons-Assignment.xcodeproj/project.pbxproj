@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D3F9A6D3503BA9B7D8FE471 /* Pods_Albertsons_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E544843F88DBD589188B202D /* Pods_Albertsons_Assignment.framework */; };
+		4D89BFB329927F7B00479DB7 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89BFB229927F7B00479DB7 /* FactResponse.swift */; };
 		4D993F7829902A4F007115F7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D993F7729902A4F007115F7 /* MainCoordinator.swift */; };
 		4D9ACA1A2990179C00585B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACA192990179C00585B6B /* AppDelegate.swift */; };
 		4D9ACA1C2990179C00585B6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACA1B2990179C00585B6B /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		29704793DFD2512E59F88949 /* Pods-Albertsons-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albertsons-Assignment.release.xcconfig"; path = "Target Support Files/Pods-Albertsons-Assignment/Pods-Albertsons-Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		49CE6F4B864D1D69D26C6FEF /* Pods_Albertsons_Assignment_Albertsons_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Albertsons_Assignment_Albertsons_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D89BFB229927F7B00479DB7 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		4D993F7729902A4F007115F7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		4D9ACA162990179C00585B6B /* Albertsons-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Albertsons-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9ACA192990179C00585B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				4D9ACA1D2990179C00585B6B /* ViewController.swift */,
 				4D9ACA5E29901AD600585B6B /* Storyboarded.swift */,
 				4DC2C0B2299049D3002A4DDB /* ViewModel.swift */,
+				4D89BFB229927F7B00479DB7 /* FactResponse.swift */,
 				4D9ACA5A29901A5600585B6B /* Coordinators */,
 				4D9ACA1F2990179C00585B6B /* Main.storyboard */,
 				4D9ACA22299017A500585B6B /* Assets.xcassets */,
@@ -431,6 +434,7 @@
 			files = (
 				4D9ACA5629901A5100585B6B /* Coordinator.swift in Sources */,
 				4D993F7829902A4F007115F7 /* MainCoordinator.swift in Sources */,
+				4D89BFB329927F7B00479DB7 /* FactResponse.swift in Sources */,
 				4DC2C0AE29904822002A4DDB /* NetworkRequests.swift in Sources */,
 				4D9ACA1E2990179C00585B6B /* ViewController.swift in Sources */,
 				4D9ACA5F29901AD600585B6B /* Storyboarded.swift in Sources */,

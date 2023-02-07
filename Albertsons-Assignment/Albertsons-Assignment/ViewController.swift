@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
@@ -25,22 +24,20 @@ class ViewController: UIViewController, Storyboarded {
         self.setUp()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
-    
     func setUp() {
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
         self.view.addGestureRecognizer(tapGesture)
+        self.navigationItem.title = "Cats Information"
     }
     
     func updateUI() {
-            self.fact.text = self.viewModel?.fact
-            self.imageView.image = UIImage(data: (self.viewModel?.imageData)!)
+        self.fact.text = viewModel?.fact
+        self.imageView.image = UIImage(data: (viewModel?.imageData)!)
     }
-    
     
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
-        
+        print("did tap view", sender)
+        coordinator?.retrieveDataAndUpdate()
     }
 }
+

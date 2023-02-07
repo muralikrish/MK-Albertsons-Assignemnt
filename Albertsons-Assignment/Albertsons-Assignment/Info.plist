@@ -33,6 +33,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSMainNibFile</key>
+	<string>Main</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

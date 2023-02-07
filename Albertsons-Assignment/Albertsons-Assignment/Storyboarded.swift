@@ -12,6 +12,10 @@ protocol Storyboarded {
     static func instantiate() -> Self
 }
 
+/**
+ Extension method which instantiates viewcontrollers from Storyboard.
+ Usage: ViewController.instantiate()
+ */
 extension Storyboarded where Self: UIViewController  {
     static func instantiate() -> Self {
         let classFullName = NSStringFromClass(self)
