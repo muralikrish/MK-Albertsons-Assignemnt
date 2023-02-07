@@ -28,3 +28,10 @@ FactResponse.swift // Has FactResponse object to decode the meowFacts Response
 
 ViewModel.swift 
 // Has ViewModel which represents the data required for UIViewcontroller's view display.
+
+
+
+
+**Video Recording Demo**
+
+https://user-images.githubusercontent.com/2981121/217324553-71f78435-c8d4-406a-86a3-38e61ec8c944.mov
