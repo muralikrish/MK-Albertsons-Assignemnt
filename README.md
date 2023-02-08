@@ -1,10 +1,11 @@
 # MK-Albertsons-Assignemnt
 
-This project display's the random Cat image along with a fact. 
+This project display's the random Cat image along with a Fact. When user taps on screen then a new Image and Fact are fetched and are displayed. 
 
-Below are the API's for fetching the Cat Image and Random fact. 
-To Fetch the Cat Image: http://placekitten.com/200/300 or: http://placekitten.com/g/200/300
-To Fetch the Cat Fact: https://meowfacts.herokuapp.com/
+Below are the API's:
+
+    To Fetch the Cat Image: http://placekitten.com/200/300 or: http://placekitten.com/g/200/300
+    To Fetch the Cat Fact: https://meowfacts.herokuapp.com/
 
 * Cocoa pods is utilized for dependency management. 
 * Alamofire for making API requests. Added as a dependency in Podfile
@@ -12,29 +13,37 @@ To Fetch the Cat Fact: https://meowfacts.herokuapp.com/
 
 ViewController is designed in storyboard and has an ImageView with placeholder Image and Label with the text "Fact Loading ..."
 
-NetworkRequesting.swift //This Class has methods to make API Requests.
+NetworkRequesting.swift //This Class has generic methods to make API Requests along with other request methods.
 
     func makeRequestWithUrl<T:Decodable>(with url:String, completion: @escaping (Result<T, Error>) -> Void) //Makes API get request and decode the response.
     
     func downloadDataWithUrl(with url: String, completion: @escaping (Data?) -> Void) // Make API request and receive the data. Ideally used to download Iamges and Files.
 
 
-MainCoordinator.swift //To handle the screen navigations and to invoke network methods and creates the ViewModel. 
+MainCoordinator.swift //Handles screen navigations, Make network requests and create the ViewModel. 
  
-     func start() //To start the coordinator. Pushes a view controller on to NavigationController
+     func start() //Starts the coordinator. Pushes a view controller on to NavigationController.
      
-DispatchGroup's enter(), leave() and wait() methods are used to create the ViewModel once after two requests are complete. 
-     Thread waits at the line wait() statement until all the enter() are fulfilled with leave() 
+DispatchGroup's enter(), leave() and wait() methods are utilized. ViewModel gets created once after two requests are complete. 
+     Thread waits at the wait() statement until all the enter()'s are fulfilled with leave() 
      
      enter() // Manually indicate a block has entered the group
      leave() // Manually indicate a block in the group has completed
      
      
-FactResponse.swift // Has FactResponse object to decode the meowFacts Response
+FactResponse.swift // Has FactResponse object to decode the meowFacts API Response.
 
-ViewModel.swift 
-// Has ViewModel which represents the data required for UIViewcontroller's view display.
+ViewModel.swift // Has ViewModel which represents the data required to display UIViewcontroller's view.
 
+Unit tests are in 
+
+    ViewModelTests.swift
+    ViewControllerTests.swift
+    NetworkRequestTests.swift
+
+Albertsons_AssignmentUITests.swift class has an UI Test.
+     
+     func testThatUIElementsPresent()
 
 **Challenges Faced:**
 By Default the applicaiton is not allowing http traffic for security reasons. So to retrieve data from the URl http://placekitten.com/200/300, added domain exceptions for "placekitten.com"
