@@ -30,6 +30,16 @@ class Albertsons_AssignmentUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testThatUIElementsPresent() {
+        let app = XCUIApplication()
+        app.launch()
+        let image = app.images["ViewController.imageView"]
+        XCTAssert(image.exists) // checking imageView present.
+        let label = app.staticTexts["ViewController.fact"]
+        XCTAssert(label.exists) //chekcing if label present
+        
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
