@@ -1,4 +1,4 @@
-# MK-Albertsons-Assignemnt
+# MK-Albertsons-Assignment
 
 This project display's the random Cat image along with a Fact. When user taps on screen then a new Image and Fact are fetched and are displayed. 
 
