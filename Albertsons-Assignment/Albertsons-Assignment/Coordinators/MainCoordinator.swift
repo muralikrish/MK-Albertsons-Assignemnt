@@ -68,3 +68,31 @@ class MainCoordinator: Coordinator {
         }
     }
 }
+
+extension MainCoordinator {
+    struct TestHooks {
+        let target: MainCoordinator
+        
+        func start() {
+            target.start()
+        }
+        
+        func retrieveDataAndUpdate() {
+            target.retrieveDataAndUpdate()
+        }
+        
+        var childCoordinators: [Coordinator] {
+            target.childCoordinators
+        }
+        
+        var meowFactResposne: FactResponse? {
+            return target.meowFactResposne
+        }
+    }
+    
+    var testHooks: TestHooks {
+        TestHooks(target: self)
+    }
+}
+
+

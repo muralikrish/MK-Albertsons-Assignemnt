@@ -25,6 +25,7 @@
 		4D9ACA5F29901AD600585B6B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ACA5E29901AD600585B6B /* Storyboarded.swift */; };
 		4DC2C0AE29904822002A4DDB /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2C0AD29904822002A4DDB /* NetworkRequests.swift */; };
 		4DC2C0B3299049D3002A4DDB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2C0B2299049D3002A4DDB /* ViewModel.swift */; };
+		4DC2DB5A2A5C6183007B9CE1 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2DB592A5C6183007B9CE1 /* MainCoordinatorTests.swift */; };
 		B5051ED9ABCF82A6C93A7FDA /* Pods_Albertsons_Assignment_Albertsons_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CE6F4B864D1D69D26C6FEF /* Pods_Albertsons_Assignment_Albertsons_AssignmentUITests.framework */; };
 		DD9B441DF129E7DF649861D2 /* Pods_Albertsons_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAF9A283E025FE9435AD548 /* Pods_Albertsons_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		4D9ACA5E29901AD600585B6B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		4DC2C0AD29904822002A4DDB /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		4DC2C0B2299049D3002A4DDB /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4DC2DB592A5C6183007B9CE1 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
 		5272214A8F717D361EDDEB64 /* Pods-Albertsons-AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albertsons-AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-Albertsons-AssignmentTests/Pods-Albertsons-AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		585AD4C00AD83AB5EB7B3DBB /* Pods-Albertsons-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albertsons-Assignment.debug.xcconfig"; path = "Target Support Files/Pods-Albertsons-Assignment/Pods-Albertsons-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		671F48A92D65C87A25726967 /* Pods-Albertsons-Assignment-Albertsons-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albertsons-Assignment-Albertsons-AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-Albertsons-Assignment-Albertsons-AssignmentUITests/Pods-Albertsons-Assignment-Albertsons-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				4D89C0122992E03700479DB7 /* ViewModelTests.swift */,
 				4D89C0172992E27400479DB7 /* ViewControllerTests.swift */,
 				4D89C01C2992E83900479DB7 /* NetworkRequestTests.swift */,
+				4DC2DB592A5C6183007B9CE1 /* MainCoordinatorTests.swift */,
 				4D9ACA32299017A500585B6B /* Info.plist */,
 			);
 			path = "Albertsons-AssignmentTests";
@@ -485,6 +488,7 @@
 				4D89C0132992E03700479DB7 /* ViewModelTests.swift in Sources */,
 				4D89C01D2992E83900479DB7 /* NetworkRequestTests.swift in Sources */,
 				4D9ACA31299017A500585B6B /* Albertsons_AssignmentTests.swift in Sources */,
+				4DC2DB5A2A5C6183007B9CE1 /* MainCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
